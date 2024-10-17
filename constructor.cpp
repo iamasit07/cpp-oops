@@ -14,13 +14,31 @@ public:
         dept = "CSE";
     }
 
-    // 2. Parametarized Constructor
-    Teacher(string n, string d, string s, double sal)
+    // 2.a Parametarized Constructor
+    // Teacher(string n, string d, string s, double sal)
+    // {
+    //     name = n;
+    //     dept = d;
+    //     subject = s;
+    //     salary = sal;
+    // }
+
+    // 2.b Parametarized constructor (with This Keyword)
+    Teacher(string name, string dept, string subject, double salary)
     {
-        name = n;
-        dept = d;
-        subject = s;
-        salary = sal;
+        this->name = name;
+        this->dept = dept;
+        this->subject = subject;
+        this->salary = salary;
+    }
+
+    // Custom made Copy constructor
+    Teacher(Teacher &orgObj)
+    {
+        this->name = orgObj.name;
+        this->dept = orgObj.dept;
+        this->subject = orgObj.subject;
+        this->salary = orgObj.salary;
     }
 
     string name;
@@ -41,6 +59,9 @@ int main()
 
     t1.name = "asit";
     t1.dept = "CSE";
+
+    Teacher t3(t2);
+    Teacher t4(t2);
 
     return 0;
 }
