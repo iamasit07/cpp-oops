@@ -65,3 +65,5 @@ int main()
 
     return 0;
 }
+
+// Note : There are also some concepts of Shallow Copy and Deep Copy that is to be understood before understanding the concept of copy constructor.
