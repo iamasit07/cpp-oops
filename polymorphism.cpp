@@ -21,6 +21,12 @@ public:
         cout << "name : " << name << endl;
         cout << "Parameterized Funtion" << endl;
     }
+
+    // Virtual function
+    virtual void hello()
+    {
+        cout << "Hello, From Parent" << endl;
+    }
 };
 
 // Function show is overriden by the child class's show function
@@ -30,6 +36,12 @@ public:
     void show()
     {
         cout << "Child class\n";
+    }
+
+    // Virtual Function will be redefined in the child class at runtime
+    void hello()
+    {
+        cout << "Hello, From Child" << endl;
     }
 };
 
